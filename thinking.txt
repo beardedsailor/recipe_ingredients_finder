@@ -1,0 +1,13 @@
+Query Box for query
+request the api with that ingredient 
+response from api is taken
+reciepe names in a list with images
+when user click on image or reciepe name
+then ingredient of that reciepe should be shown
+Additional features - 
+1.colories it gave to our body 
+2.Energy it provides
+3.Time to prepare
+
+there is MORE button at end of list on homepage for more reciepes
+ 
