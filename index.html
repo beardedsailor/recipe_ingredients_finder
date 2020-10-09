@@ -34,11 +34,11 @@
 <main data-spy="scroll" data-target=".navbar" data-offset="50">
   <div class="jumbotron photo-cover text-inverse">
       <div class="col-md-4 text-center center">
-        <h3>Recipe Name</h3>
+        <h3 style="color: black">Recipe Name</h3>
        <div class="input-group">
    <input type="text" class="form-control" id="qn">
    <span class="input-group-btn">
-        <button class="btn btn-default" type="button" id="btn" onclick="check()">Go!</button>
+        <button class="btn btn-default" type="submit" id="btn" onclick="check()">Go!</button>
    </span>
 </div> 
          
@@ -46,9 +46,61 @@
       </div> <!-- .col-md-6 -->
     </div> 
     <!-- .jumbotron -->
-    <div>
-        <ol id="d"></ol>
-    </div> 
+    <div id="d">
+        <!--<ol id="d"></ol> 
+        -->
+
+        <div class="card">
+      <div class="card-image" id="a" >
+        <img src="https://www.edamam.com/web-img/7fe/7fee72cbf470edc0089493eb663a7a09.jpg" id="image0">
+      </div>
+      <div class="card-text">
+        
+        <h2 id="n0">Pizza</h2>
+        <h3 id="s0" style="font-size:20px;">Ingredients</h3>
+        <p id="p0">1 pack pizza base mix, 3 tbsp tomato pizza sauce, 2 small cooking chorizo diced, 1 tbsp capers drained, handful cherry tomatoes, halved handful rocket, olive oil to drizzle</p>
+      </div>
+     
+    </div>
+    <div class="card" >
+      <div class="card-image card2">
+        <img src="https://www.edamam.com/web-img/8c3/8c32f359fc50fd6b86cff8d6511bfb46.jpg" id="image1">
+      </div>
+      <div class="card-text card2">
+        <!--span class="date">1 week ago</span-->
+        <h2 id="n1">Noodles</h2>
+        <h3 id="s1" style="font-size:20px;">Ingredients</h3>
+        <p id="p1">1.0 tbsp soy sauce, 250.0g soba noodles (see know-how below), zest and juice 1 lime, 4 spring onions shredded</p>
+      </div>
+      <!--div class="card-stats card2">
+        <div class="stat">
+          <div class="value">7<sup>m</sup></div>
+          <div class="type">read</div>
+        </div>
+        <div class="stat border">
+          <div class="value">7152</div>
+          <div class="type">views</div>
+        </div>
+        <div class="stat">
+          <div class="value">21</div>
+          <div class="type">comments</div>
+        </div>
+      </div-->
+    </div>
+    <div class="card" >
+        <div class="card-image card3" >
+          <img src="https://www.edamam.com/web-img/f4d/f4dad71fec563dfba890813f81b33e10.jpg" id="image2">
+        </div>
+        <div class="card-text card3">
+          
+          <h2 id="n2">Idli</h2>
+          <h3 id="s2" style="font-size:20px; ">Ingredients</h3>
+          <p id="p2">2 cups of idli batter, preferably 2-3 days old, 1 tomato, A few curry leaves, 2-3 tbsp of gingelly oil, indian sesame oil, i use idhayam</p>
+        </div>
+        
+      </div>
+</div>
+    
 
   <div id="contact" class="jumbotron">
     <div class="container">
@@ -69,7 +121,7 @@
       </div> <!-- .col-md-8 -->
     </div> <!-- .container -->
   </div> <!-- #contact -->
-
+</div>
 <div class="text-center text-inverse navbar-inverse">
     <div class="container">
       <div class="row">

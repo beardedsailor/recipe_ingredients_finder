@@ -2,11 +2,26 @@ var i = 0;
 var start_value = 0;
 var end_value = 3;
 var q;
+
+
+
+var input = document.getElementById("qn");
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    console.log("enter pressed");
+    document.getElementById("btn").click();
+    document.getElementById("qn").value = "";
+
+  }
+});
+
+
 //document.getElementById("more").hidden = true;
 function check() {
- // let o = document.getElementById("d");
-  
-  
+  // let o = document.getElementById("d");
+
+
+
   var query = document.getElementById("qn").value;
   q = query;
   if (query == "") {
@@ -17,7 +32,27 @@ function check() {
     query +
     "&app_id=980128a6&app_key=7c13707892fb0523f22e6159b2257945&from=0&to=3";
 
-  if (i >= 1) {
+  fetch(url)
+    .then((res) => res.json())
+    .then(function (data) {
+      let d1 = data;
+      for (i = 0; i < 3; i++) {
+        document.getElementById("image" + `${i}`).src = d1.hits[i].recipe.image;
+        
+        //document.getElementById("myImg").src = "hackanm.gif";
+        //var v = ;
+        // console.log(d1.hits[i].recipe.image);
+        //console.log(d1.hits[i].recipe.ingredientLines);
+        //img.setAttribute("background-image", d1.hits[i].recipe.image);
+        var head = document.getElementById("n" + `${i}`);
+        head.innerHTML = d1.hits[i].recipe.label;
+        var ing = document.getElementById("p" + `${i}`);
+        ing.innerHTML = d1.hits[i].recipe.ingredientLines;
+      }
+    });
+  document.getElementById("qn").value = "";
+}
+/*if (i >= 1) {
     var list = document.getElementById("d");
     j = 0;
     while (list.hasChildNodes()) {
@@ -35,13 +70,13 @@ function check() {
 
   }
   document.getElementById("d").hidden = false;*/
-  let rec;
-  //console.log(url);
-  fetch(url)
+//let rec;
+//console.log(url);
+/*fetch(url)
     .then((res) => res.json())
     .then(function (data) {
       let d1 = data;
-      console.log(d1.q);
+      //console.log(d1.q);
       let ol = document.getElementById("d");
       for (var i = 0; i < 3; i++) {
         var li = document.createElement("li");
@@ -68,14 +103,14 @@ function check() {
   document.getElementById("qn").value = "";
   i++;
 }
-
-function check1(start_val, end_val) {
+*/
+/*function check1(start_val, end_val) {
   // let o = document.getElementById("d");
 
   /*var query = document.getElementById("qn").value;
   if (query == "") {
     window.alert("enter keyword");
-  }*/
+  }
   var query = q;
   let url =
     "https://api.edamam.com/search?q=" +
@@ -98,7 +133,7 @@ function check1(start_val, end_val) {
 
   }
   document.getElementById("d").hidden = false;*/
-  let rec;
+/*let rec;
   //console.log(url);
   fetch(url)
     .then((res) => res.json())
